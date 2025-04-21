@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* header_input(車輌番号入力)*/
+
+header{
+	width: 100%;
+	height: 90px;
+	position:absolute;
+	top:0;left:0;
+	z-index: 999;
+}
+.header_wrap{
+	background-color: #dcf3ff;
+	height: 90px;
+	position: relative;
+}
+header h1{
+	width: 40%;
+	min-width: 500px;
+	height: 90px;
+	padding:53px 0 0 2%;
+	font-size:24px;
+}
+header h1 img{
+	display: inline-block;
+	width: 60px;
+	height: auto;
+	vertical-align: middle;
+}
+header h1 span{
+	display: inline-block;
+	margin: 0 0.5% 0 0;
+}
+header h1 span:nth-of-type(1){
+	margin-left: 5%;
+}
+header .port_name{
+	width: 40%;
+	min-width: 500px;
+	height: 50px;
+	border-radius: 0 0 10px 0;
+	font-size:32px; 
+	padding: 5px 0 0 2%;
+	position: absolute;
+	top:0;left:0;
+}
+header .btn_close{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	font-size: 16px;
+	position: absolute;
+	top:10px;right:10px;
+}
+header .btn_close:hover{
+	opacity: 0.8;
+}
+header .company_logo{
+	background-image:url("../img/common/logo_company.svg");
+	width: 120px;
+	height: 20px;
+	background-size: contain;
+	position: absolute;
+	bottom:7px;right: 10px;
+}
+
+@media screen and (min-width:0px) and (max-width:767px){
+	
+	header{
+		width: 100%;
+		height: 60px;
+		position:absolute;
+		top:0;left:0;
+		z-index: 999;
+	}
+	.header_wrap{
+		background-color: #dcf3ff;
+		height: 60px;
+		position: relative;
+	}
+	header h1{
+		width: 60%;
+		min-width: 220px;
+		height: 60px;
+		padding:32px 0 0 2%;
+		font-size:18px;
+	}
+	header h1 img{
+		display: inline-block;
+		width: 45px;
+		height: auto;
+		vertical-align: middle;
+	}
+	header h1 span{
+		display:none;
+	}
+	header h1 span:nth-of-type(1){
+		margin-left: 5%;
+	}
+	header .port_name{
+		width: 60%;
+		min-width: 220px;
+		height: 30px;
+		border-radius: 0 0 10px 0;
+		font-size:16px; 
+		padding: 5px 0 0 2%;
+		position: absolute;
+		top:0;left:0;
+	}
+	header .btn_close{
+		width: 70px;
+		height: 25px;
+		line-height: 25px;
+		border-radius: 5px;
+		font-size: 14px;
+		position: absolute;
+		top:5px;right:5px;
+	}
+	header .btn_close:hover{
+		opacity: 0.8;
+	}
+	header .company_logo{
+		background-image:url("../img/common/logo_company.svg");
+		width: 100px;
+		height: 15px;
+		background-size: contain;
+		position: absolute;
+		bottom:5px;right:5px;
+	}
+}

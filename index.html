@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex"><!--インデックス拒否-->
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--スマホ時のみviewportでレスポンシブ設定 = タブレット表示対策-->
+<script type="text/javascript">
+	if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+			document.write('<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">');
+	}
+
+	const audio = new Audio('sound_02.mp3');
+	function playAudio(duration) {
+	  audio.currentTime = 0;
+	  audio.play();
+	  setTimeout(() => {
+	    audio.pause();
+	    if (duration > 0) {
+	      playAudio(duration - audio.duration);
+	    }
+	  }, audio.duration * 1000);
+	}
+</script>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>遠隔RTGレーン-進入不可</title>
+<link href="img/common/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"><!--favicon-->
+<link href="web_font_notosans/font.css" rel="stylesheet" type="text/css" /><!--font-japanese-->
+<link href="web_font_Roboto-Condensed/font.css" rel="stylesheet" type="text/css" /><!--font-english-->
+<link href="css/common/common.css" rel="stylesheet" type="text/css" /><!--共通CSS-->
+<link href="css/header_lane.css" rel="stylesheet" type="text/css" /><!--header_input-->
+<link href="css/lane_remote_ng.css" rel="stylesheet" type="text/css" /><!--ページ毎のCSS-->
+<script>
+	// スマートフォンのみで動作するように条件を追加、だがタブレットでも出てしまうケースあり
+	if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+		window.addEventListener("orientationchange", function() {
+		if (window.orientation === 90 || window.orientation === -90) {
+			alert("【注】このアプリケーションは、スマートフォンで見る場合は必ず「縦向き」にしてください");
+			}
+		});
+	}
+</script>
+</head>
+<body>
+	
+	<header class="header_lane">
+		<div class="header_wrap">
+			<h1 class="eng bold blue">
+				<img class="logo_title" src="img/common/illust_track_title.svg" alt="トラックアイコン">
+				TRUCKER VIEW
+				<span class="jap normal black small">VERSION-1.0.0</span>
+				<span class="jap normal black small">RELEASE-2024.04.01</span>
+			</h1>
+			<div class="port_name eng bold bg_blue white">Shimizu Container Terminal</div>
+			<div class="update_time jap t_right">[ 更新日時 ]2023.10.5-14:15:22</div>
+			<div class="update">
+				<button class="white">
+					<img src="img/common/obj_update.svg" alt="更新ボタン">
+<!-- 					<span class="update_message tab">更新が必要です</span>
+					<span class="update_message sp">更新</span> -->
+				</button>
+			</div>
+			<div class="volume" onclick="playAudio(7)">
+				<button class="white">
+					<span>音量<br>確認</span>
+				</button>
+			</div>
+			<div class="btn_close white bold bg_blue white t_center">閉じる</div>
+			<div class="company_logo no_repeat"></div>
+		</div><!--header_wrap-->
+	</header><!--header_input-->
+	
+	
+	<section class="view_area">
+		<div class="head_data">
+			<ul>
+				<li>
+					<h2>ヘッドID.</h2>
+					<p>AR123</p>
+				</li>
+				<li>
+					<h2>コンテナNo.</h2>
+					<p>EMCU8319732</p>
+				</li>
+				<li>
+					<h2>レーンNo.</h2>
+					<p>2E</p>
+				</li>
+				<li>
+					<h2>ベイNo.</h2>
+					<p>21/22</p>
+				</li>
+			</ul>
+		</div><!--head_data-->
+		<div class="signal">
+			<img src="img/mark/obj_ng.svg" alt="×マーク">
+			<p class="ng_lane red bold"><span>2E21/22</span>進入不可</p>
+		</div><!--signal-->
+		<div class="lane_view">
+			<ul>
+				<li>
+					<div class="lane_number">53</div>
+					<div class="lane_illust_area">
+						<div class="lane_illust">
+							<img src="img/common/illust_lane.svg" alt="レーン">
+						</div>
+						<div class="lane_truck">
+							<img src="img/truck/truck_navy.svg" alt="トラック">
+							<p class="truck_number white">4782</p>
+						</div>
+					</div>
+					<div class="lane_detail_wrap">
+						<div class="lane_detail_area no_1">
+							<div class="detail_number">1</div>
+							<p class="up_text">07/08-4-2</p>
+							<p class="bottom_text">
+								<span>SZ203</span>&emsp;
+								<span>搬入</span>
+							</p>
+						</div>
+						<div class="arrow_blue t_center">
+							<img src="img/common/obj_arrow_blue.png" alt="">
+						</div>
+						<div class="lane_detail_area no_2">
+							<div class="detail_number">2</div>
+							<p class="up_text">05/06-2-2</p>
+							<p class="bottom_text">
+								<span>横持</span>&emsp;
+								<span>ダメチェ</span>
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="lane_number">02</div>
+					<div class="lane_illust_area">
+						<div class="lane_illust">
+							<img src="img/common/illust_lane.svg" alt="レーン">
+						</div>
+						<div class="lane_truck pre">
+							<img src="img/truck/truck_navy_pre.svg" alt="トラック">
+							<p class="truck_number navy">7401</p>
+						</div>
+					</div>
+					<div class="lane_detail_wrap">
+						<div class="lane_detail_area no_1">
+							<div class="detail_number">1</div>
+							<p class="up_text">13-3-3</p>
+							<p class="bottom_text">
+								<span>AA001</span>&emsp;
+								<span>搬出</span>
+							</p>
+						</div>
+						<div class="arrow_blue t_center">
+							<img src="img/common/obj_arrow_blue.png" alt="">
+						</div>
+						<div class="lane_detail_area no_2">
+							<div class="detail_number">2</div>
+							<p class="up_text">15/16-5-3</p>
+							<p class="bottom_text">
+								<span>HE301</span>&emsp;
+								<span>搬出</span>
+							</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="lane_number">52</div>
+					<div class="lane_illust_area">
+						<div class="lane_illust">
+							<img src="img/common/illust_lane.svg" alt="レーン">
+						</div>
+						<div class="lane_truck">
+							<img src="img/truck/truck_gray.svg" alt="トラック">
+							<p class="truck_number white">8472</p>
+						</div>
+					</div>
+					<div class="lane_detail_wrap">
+						<div class="lane_detail_area no_1">
+							<div class="detail_number">1</div>
+							<p class="up_text">23-1-3</p>
+							<p class="bottom_text">
+								<span>本船</span>&emsp;
+								<span>揚3</span>
+							</p>
+						</div>
+						<div class="arrow_blue t_center">
+							<img src="img/common/obj_arrow_blue.png" alt="">
+						</div>
+						<div class="lane_detail_area no_2">
+							<div class="detail_number">2</div>
+							<p class="up_text">31/32-3-4</p>
+							<p class="bottom_text">
+								<span>AC401</span>&emsp;
+								<span>搬出</span>
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div><!--lane_view-->
+		
+		<div class="blank"></div>
+		
+		<div class="job">
+			<h2>レーンジョブ</h2>
+			<div>
+				<h3>レーン&emsp;<span>2E</span></h3>
+				<p>本船：3台／横持：1台／ゲート：8台</p>
+			</div>
+		</div><!--job-->
+		
+		<div class="schedule">
+			<h2><span>予定</span>レーン作業順</h2>
+			<ul class="clearfix">
+				<li>
+					<h3>SZ203</h3>
+					<div class="truck">
+						<img src="img/truck/truck_navy.svg" alt="トラック">
+						<p class="number white">4782</p>
+					</div>
+					<p class="bay_number">07/08</p>
+				</li>
+				<li>
+					<h3>AA001</h3>
+					<div class="truck">
+						<img src="img/truck/truck_navy_pre.svg" alt="トラック">
+						<p class="number navy">7401</p>
+					</div>
+					<p class="bay_number">13</p>
+				</li>
+				<li>
+					<h3>本船</h3>
+					<div class="truck">
+						<img src="img/truck/truck_gray.svg" alt="トラック">
+						<p class="number white">8472</p>
+					</div>
+					<p class="bay_number">23</p>
+				</li>
+				<li>
+					<h3>横持</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_gray.svg" alt="トラック">
+						<p class="number white">0327</p>
+					</div>
+					<p class="bay_number">05/06</p>
+				</li>
+				<li>
+					<h3>HE301</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_navy_pre.svg" alt="トラック">
+						<p class="number navy">3873</p>
+					</div>
+					<p class="bay_number">15/16</p>
+				</li>
+				<li>
+					<h3>AC401</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_navy_pre.svg" alt="トラック">
+						<p class="number navy">9023</p>
+					</div>
+					<p class="bay_number">31/32</p>
+				</li>
+				<li>
+					<h3>SN302</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_navy.svg" alt="トラック">
+						<p class="number white">1234</p>
+					</div>
+					<p class="bay_number">05/06</p>
+				</li>
+				<li class="current">
+					<h3>AR123</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_navy.svg" alt="トラック">
+						<p class="number white">9732</p>
+					</div>
+					<p class="bay_number">21/22</p>
+				</li>
+				<li>
+					<h3>本船</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_gray_pre.svg" alt="トラック">
+						<p class="number gray">6295</p>
+					</div>
+					<p class="bay_number">11/12</p>
+				</li>
+				<li>
+					<h3>本船</h3>
+					<div class="truck pre">
+						<img src="img/truck/truck_gray.svg" alt="トラック">
+						<p class="number white">0262</p>
+					</div>
+					<p class="bay_number">21/22</p>
+				</li>
+			</ul>
+		</div><!--schedule-->
+		
+		
+	</section><!--view_area-->
+
+	
+<script src="js/html5shiv.js"></script>
+<script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+@charset "UTF-8";
+/* index（車輌番号入力） */
+
+.view_area{
+	width: 100%;
+	height: 100vh;
+	border-top: solid 100px #fff;
+	border-right: solid 10px #fff;
+	border-bottom: solid 10px #fff;
+	border-left: solid 10px #fff;
+	padding:30px 5% 0;
+	background-color: #dcf3ff;
+	overflow: hidden;
+	position: relative;
+	z-index:2;
+}
+.terminal_name{
+	font-size: 36px;
+	padding-bottom:5px;
+	border-bottom: solid 5px #219bdd;
+}
+.apri_name{
+	width: 60%;
+	text-align: center;
+	min-width: 360px;
+	margin: 15px auto 30px;
+	height: 45px;
+	font-size:30px;
+}
+.apri_name img{
+	display: inline-block;
+	width: 90px;
+	height: auto;
+	vertical-align: middle;
+}
+.view_area form{
+	display: block;
+	width: 50%;
+	min-width: 600px;
+	margin:0 auto 10px;
+	text-align: center;
+}
+.view_area form label{
+	display: inline-block;
+	font-size: 24px;
+	letter-spacing:2px; 
+	margin-right: 5%;
+}
+.view_area form input[type="text"]{
+	display: inline-block;
+	text-align: center;
+	border: solid 2px #dfdfdf;
+	background-color: #ffffff;
+	min-width:240px;
+	width: 30%;
+	height: 70px;
+	font-size: 24px;
+	border-radius: 10px;
+	box-shadow: 0 0 7px #eeeeee inset;
+	padding: 5px 10px;
+	vertical-align: baseline;
+}
+.view_area form input[type="text"]::placeholder{
+	color: #e0e0e0;
+	letter-spacing: 2px;
+}
+.view_area form button{
+	display: inline-block;
+	margin-left: 1%;
+	width: 150px;
+	height: 70px;
+	line-height: 70px;
+	background-color: #23b1b2;
+	color: #fff;
+	font-size: 24px;
+	letter-spacing: 5px;
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+}
+.view_area form button:hover{
+	opacity: 0.8;
+}
+.view_area .soundcheck{
+	width: 400px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 25px;
+	background-color: #23b1b2;
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 5px;
+	background-image: url("../img/common/icon_arrow_green.svg");
+	background-size: 20px 20px;
+	background-position: top 15px right 25px;
+	position: absolute;
+	bottom:60px;left:50%;
+	margin-left: -200px;
+}
+.view_area .soundcheck:hover{
+	opacity: 0.8;
+}
+
+.view_area .image{
+	width: 100%;
+	position: absolute;
+	bottom: 0; left:0;
+	z-index:-1;
+}
+.view_area .image img{
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) and (orientation: portrait) { /*タブレット縦向き対策 - ipad mini（768×1024）*/
+	
+	.view_area{
+		width: 100%;
+		height: 99vh;
+		border-top: solid 100px #fff;
+		border-right: solid 10px #fff;
+		border-bottom: solid 10px #fff;
+		border-left: solid 10px #fff;
+		padding:100px 5% 0;
+		background-color: #dcf3ff;
+		overflow: hidden;
+		position: relative;
+		z-index:2;
+	}
+	.terminal_name{
+		font-size: 40px;
+		padding-bottom:15px;
+		border-bottom: solid 5px #219bdd;
+	}
+	.apri_name{
+		width: 75%;
+		text-align: center;
+		min-width: 360px;
+		margin: 15px auto 60px;
+		height: 45px;
+		font-size:36px;
+	}
+	.view_area form{
+		display: block;
+		width: 80%;
+		min-width:unset;
+		margin:0 auto;
+		text-align: center;
+	}
+	.view_area form label{
+		display: block;
+		font-size: 30px;
+		letter-spacing:2px; 
+		margin:0 auto 15px;
+	}
+	.view_area form input[type="text"]{
+		display: inline-block;
+		text-align: center;
+		border: solid 2px #dfdfdf;
+		background-color: #ffffff;
+		min-width:unset;
+		width: 50%;
+		height: 70px;
+		font-size: 24px;
+		border-radius: 10px;
+		box-shadow: 0 0 7px #eeeeee inset;
+		padding: 5px 10px;
+		margin:0 auto 10px;
+		vertical-align: baseline;
+	}
+	.view_area form input[type="text"]::placeholder{
+		color: #e0e0e0;
+		letter-spacing: 2px;
+	}
+	.view_area form button{
+		display: block;
+		margin: 0 auto 10px;
+		width: 50%;
+		height: 70px;
+		line-height: 70px;
+		background-color: #23b1b2;
+		color: #fff;
+		font-size: 24px;
+		letter-spacing: 5px;
+		text-align: center;
+		border: none;
+		border-radius: 10px;
+	}
+	.view_area .soundcheck{
+		width: 400px;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 25px;
+		background-color: #23b1b2;
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 5px;
+		background-image: url("../img/common/icon_arrow_green.svg");
+		background-size: 20px 20px;
+		background-position: top 15px right 25px;
+		position: absolute;
+		bottom:200px;left:50%;
+		margin-left: -200px;
+	}
+}
+
+@media screen and (min-width:0px) and (max-width:767px){
+	
+	.view_area{
+		width: 100%;
+		height: 99vh;
+		border-top: solid 65px #fff;
+		border-right: solid 5px #fff;
+		border-bottom: solid 55px #fff;
+		border-left: solid 5px #fff;
+		padding:25px 2% 0;
+		background-color: #dcf3ff;
+		overflow: hidden;
+		position: relative;
+		z-index:2;
+	}
+	.terminal_name{
+		font-size: 20px;
+		padding-bottom:5%;
+		border-bottom: solid 5px #219bdd;
+	}
+	.apri_name{
+		width: 90%;
+		text-align: center;
+		min-width:unset;
+		margin: 15px auto 25px;
+		height: auto;
+		font-size:30px;
+	}
+	.apri_name img{
+		display: inline-block;
+		width: 80px;
+		height: auto;
+		vertical-align: middle;
+	}
+	.view_area form{
+		display: block;
+		width: 96%;
+		min-width:unset;
+		margin:0 auto 10px;
+		text-align: center;
+	}
+	.view_area form label{
+		display: block;
+		font-size: 22px;
+		letter-spacing:2px; 
+		margin-right:0;
+		margin-bottom: 20px;
+	}
+	.view_area form input[type="text"]{
+		display: inline-block;
+		text-align: center;
+		border: solid 2px #dfdfdf;
+		background-color: #ffffff;
+		min-width:200px;
+		width: 50%;
+		height: 50px;
+		font-size: 18px;
+		border-radius: 10px;
+		box-shadow: 0 0 7px #eeeeee inset;
+		padding: 5px 10px;
+		vertical-align: baseline;
+		margin-bottom: 10px;
+	}
+	.view_area form input[type="text"]::placeholder{
+		color: #e0e0e0;
+		letter-spacing: 2px;
+	}
+	.view_area form button{
+		display: block;
+		margin: 0 auto 10px;
+		min-width:200px;
+		width: 50%;
+		height: 50px;
+		line-height: 50px;
+		background-color: #23b1b2;
+		color: #fff;
+		font-size: 22px;
+		letter-spacing: 5px;
+		text-align: center;
+		border: none;
+		border-radius: 10px;
+	}
+	.view_area form button:hover{
+		opacity: 0.8;
+	}
+	.view_area .soundcheck{
+		width: 300px;
+		height: 50px;
+		line-height: 50px;
+		border-radius: 25px;
+		background-color: #23b1b2;
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 5px;
+		background-image: url("../img/common/icon_arrow_green.svg");
+		background-size: 20px 20px;
+		background-position: top 15px right 25px;
+		position: absolute;
+		bottom:50px;left:50%;
+		margin-left: -150px;
+	}
+	.view_area .soundcheck:hover{
+		opacity: 0.8;
+	}
+	.view_area .image{
+		width: 100%;
+		position: absolute;
+		bottom: 0; left:0;
+		z-index:-1;
+	}
+	.view_area .image img{
+		width: 100%;
+		height: auto;
+	}
+}

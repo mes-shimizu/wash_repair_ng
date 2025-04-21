@@ -1,0 +1,1030 @@
+@charset "UTF-8";
+/* lane_remote_ng（遠隔RTGレーン-進入不可） */
+
+.view_area{
+	width: 100%;
+	height: 100vh;
+	border-top: solid 100px #fff;
+	border-right: solid 10px #fff;
+	border-bottom: solid 10px #fff;
+	border-left: solid 10px #fff;
+	overflow: hidden;
+	position: relative;
+	z-index:2;
+}
+.head_data{
+	width: 100%;
+	border-bottom: solid 5px #fff;
+}
+.head_data ul{
+	height: 10vh;
+	display: flex;
+}
+.head_data ul li{
+	width: calc(25%);
+	height: 10vh;
+	margin: 0 2px;
+	border: solid 2px #219bdd;
+}
+.head_data ul li h2{
+	height: 4vh;
+	text-align: center;
+	font-size:16px;
+	font-weight: bold;
+	color: #FFF;
+	background-color:#219bdd; 
+}
+.head_data ul li p{
+	height: 5.3vh;
+	font-size: calc(0.75vw + 1rem);
+	line-height: 1.5em;
+	font-weight: bold;
+	padding:0 2% 0 4%;
+	background-color:#fff;
+	overflow: hidden;
+}
+.signal{
+	width: 30%;
+	height: 35vh;
+	padding:0.5% 1%;
+	text-align: center;
+	background-color: #ffe3e3;
+	border: solid 5px #ff0000;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+.signal .no_sound_text{
+	font-size: 18px;
+	font-weight: bold;
+}
+.signal img{
+	display: block;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top:50%;left:50%;
+	margin-left:-45px;
+	margin-top: -65px;
+}
+.signal .ng_lane{
+	width: 96%;
+	font-size: calc(0.8vw + 1.4rem);
+	position: absolute;
+	bottom: 25px;left:2%;
+}
+.signal .ng_lane span{
+	color: #000;
+	margin-right: 2%;
+}
+.lane_view{
+	width: 70%;
+	height: 35vh;
+	padding:1.125vh 0.5%;
+	border-left: solid 5px #fff;
+	background-color: #efefef;
+	float: left;
+}
+.lane_view ul{
+	display: flex;
+}
+.lane_view ul li{
+	width:calc(32.6%);
+	height: 32.75vh;
+	overflow: hidden;
+	margin-right: 1.1%;
+	background-color: #fff;
+	border: solid 1px #000;
+	position: relative;
+}
+.lane_view ul li:nth-of-type(3){
+	margin-right: 0;
+}
+.lane_view ul li .lane_number{
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background-color: #000;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+}
+.lane_view ul li .lane_illust_area{
+	width: 98%;
+	height: 15vh;
+	text-align: center;
+	margin:-7.5% auto 0;
+	position: relative;
+}
+.lane_view ul li .lane_illust{
+	width: 40%;
+	height: 15vh;
+	display: inline-block;
+}
+.lane_view ul li .lane_illust img{
+	width: 55px;
+	height: auto;
+}
+.lane_view ul li .lane_truck{
+	width: 85px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	padding-top:8px;
+	text-align: center;
+	background-color: #ecfaff;
+	border: solid 1px #219bdd;
+	position: relative;
+}
+.lane_view ul li .lane_truck.pre{
+	padding-top: 24px;
+}
+.lane_view ul li .lane_truck img{
+	width: 65px;
+	height: auto;
+}
+.lane_view ul li .lane_truck .truck_number{
+	font-size: 14px;
+	letter-spacing: 0;
+	font-weight: bold;
+	position: absolute;
+	top:10px;left:35px;
+}
+.lane_view ul li .lane_truck .truck_number.white{
+	color:#fff;
+}
+.lane_view ul li .lane_truck .truck_number.navy{
+	color:#003fdb;
+}
+.lane_detail_wrap{
+	width: 95%;
+	position: absolute;
+	bottom:2.5%;left:2.5%;
+}
+.lane_view ul li .lane_detail_area{
+	width: 100%;
+	border: solid 1px #219bdd;
+	margin: 0 auto;
+}
+.lane_view ul li .arrow_blue{
+	height: 10px;
+}
+.lane_view ul li .arrow_blue img{
+	display: block;
+	height: 5px;
+	width: auto;
+	margin: 3px auto 0;
+}
+.lane_view ul li .lane_detail_area .detail_number{
+	width: 25px;
+	height: 25px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	background-color:#219bdd;
+	text-align: center;
+}
+.lane_view ul li .lane_detail_area .up_text{
+	text-align: center;
+	font-size: calc(0.5vw + 0.6rem); 
+	font-weight: bold;
+	margin-top: -25px;
+}
+.lane_view ul li .lane_detail_area .bottom_text{
+	text-align: center;
+	font-size: calc(0.5vw + 0.6rem); 
+	font-weight: bold;
+	letter-spacing: 0;
+}
+.blank{
+	clear: both;
+	height:5px;
+}
+.job{
+	clear: both;
+	width: 100%;
+	height: 10vh;
+	border: solid 2px #219bdd;
+	border-bottom: transparent;
+	overflow: hidden;
+}
+.job h2{
+	width: 250px;
+	height: 4vh;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background-color:#219bdd; 
+}
+.job div{
+	padding: 0 20px 0 45px;
+}
+.job h3{
+	display: inline-block;
+	font-size: calc(0.5vw + 1rem); 
+	font-weight: bold;
+	position: relative;
+}
+.job h3:before{
+	content:"";
+	width: 10px;
+	height: 10px;
+	background-color:#219bdd;
+	position: absolute;
+	top:35%;left:-30px;
+}
+.job h3:after{
+	content:"";
+	width:0;
+	height:0;
+	border:solid 5px transparent;
+	border-left:solid 10px #219bdd; 
+	position: absolute;
+	top:35%;right:-45px;
+}
+.job p{
+	display: inline-block;
+	font-size: calc(0.5vw + 1rem); 
+	font-weight: bold;
+	margin-left: 60px;
+}
+.schedule{
+	width: 100%;
+	height: 25vh;
+	border: solid 2px #219bdd;
+	overflow: hidden;
+}
+.schedule h2{
+	width: 250px;
+	height: 4vh;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background-color:#219bdd;
+	position: relative;
+}
+.schedule h2 span{
+	display:block;
+	width: 40px;
+	height: 3vh;
+	line-height: 3vh;
+	background-color: #fff;
+	color: #219bdd;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	top:2px;left:2px;
+}
+.schedule ul{
+	display: flex;
+	padding: 5px 10px;
+}
+.schedule ul li{
+	width:10%;
+	min-width: 90px;
+	padding:0 5px;
+	text-align: center;
+}
+.schedule ul li.current{
+	background-color: #fff3f3;
+	border: solid 3px #ff0000;
+	border-radius:10px; 
+}
+.schedule ul li h3{
+	font-size: 16px;
+	font-weight:bold;
+	text-align: center;
+	margin-bottom: 3px;
+}
+.schedule ul li .truck{
+	width: 70px;
+	height:40px;
+	margin: 0 auto;
+	position: relative;
+}
+.schedule ul li .truck img{
+	width: 100%;
+	height:auto;
+	position: absolute;
+	bottom: 2px;left:0;
+}
+.schedule ul li .truck.pre img{
+	opacity: 0.35;
+}
+.schedule ul li .truck .number{
+	width: 50px;
+	font-size: 16px;
+	letter-spacing: 0;
+	font-weight:bold;
+	position: absolute;
+	top:2px;left:20px;
+}
+.schedule ul li .truck .number.white{
+	color:#fff;
+}
+.schedule ul li .truck .number.navy{
+	color:#003fdb;
+}
+.schedule ul li .bay_number{
+	font-size: 16px;
+	font-weight:bold;
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) and (orientation: portrait) { /*タブレット縦向き対策 - ipad mini（768×1024）*/
+	
+	.view_area{
+		width: 100%;
+		height: 100vh;
+		border-top: solid 100px #fff;
+		border-right: solid 10px #fff;
+		border-bottom: solid 10px #fff;
+		border-left: solid 10px #fff;
+		overflow: hidden;
+		position: relative;
+		z-index:2;
+	}
+	.head_data{
+		width: 100%;
+		border-bottom: solid 5px #fff;
+	}
+	.head_data ul{
+		height: 6vh;
+		display: flex;
+		
+	}
+	.head_data ul li{
+		width: calc(25%);
+		height: 6vh;
+		margin: 0 2px;
+		border: solid 2px #219bdd;
+	}
+	.head_data ul li h2{
+		height: 2.5vh;
+		line-height: 2.5vh;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		color: #FFF;
+		background-color:#219bdd; 
+	}
+	.head_data ul li p{
+		height: 3vh;
+		font-size: 24px;
+		line-height: 1.5em;
+		font-weight: bold;
+		padding:0 2% 0 4%;
+		background-color:#fff;
+		overflow: hidden;
+	}
+	.signal{
+		width: 100%;
+		height: 15vh;
+		padding:1% 1% 1% 25%;
+		text-align: left;
+		background-color: #ffe3e3;
+		border: solid 5px #ff0000;
+		border-radius: 20px;
+		overflow: hidden;
+		position: relative;
+		float:none;
+	}
+	.signal img{
+		display: block;
+		width: 9%;
+		height: auto;
+		position: absolute;
+		top:50%;left:12.5%;
+		margin-left:-4.5%;
+		margin-top: -4.5%;
+	}
+	.signal .ng_lane{
+		width: 75%;
+		font-size: 50px;
+		line-height: 1.25em;
+		position:static;
+		margin-top: 3.5vh;
+	}
+	.signal .ng_lane span{
+		color: #000;
+		margin-right: 2%;
+	}
+	.lane_view{
+		width: 100%;
+		height: 25vh;
+		padding:0.5vh 1%;
+		border-left:none;
+		border-top: solid 5px #fff;
+		background-color: #efefef;
+		float:none;
+	}
+	.lane_view ul{
+		display: flex;
+	}
+	.lane_view ul li{
+		width:calc(32.6%);
+		height: 24vh;
+		overflow: hidden;
+		margin-right: 1.1%;
+		background-color: #fff;
+		border: solid 1px #000;
+		position: relative;
+	}
+	.lane_view ul li:nth-of-type(3){
+		margin-right: 0;
+	}
+	.lane_view ul li .lane_number{
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		background-color: #000;
+		font-size: 24px;
+		line-height: 40px;
+		color: #fff;
+		font-weight: bold;
+	}
+	.lane_view ul li .lane_illust_area{
+		width: 98%;
+		height: 6.5vh;
+		text-align: center;
+		margin:-10% auto 0;
+		position: relative;
+	}
+	.lane_view ul li .lane_illust{
+		width: 40%;
+		height: 6.5vh;
+		display: inline-block;
+	}
+	.lane_view ul li .lane_illust img{
+		width: 100%;
+		max-width: 70px;
+		height: auto;
+	}
+	.lane_view ul li .lane_truck{
+		width: 110px;
+		height: 70px;
+		display: inline-block;
+		padding-top:15px;
+		text-align: center;
+		background-color: #ecfaff;
+		border: solid 1px #219bdd;
+		position: relative;
+		vertical-align: text-bottom;
+	}
+	.lane_view ul li .lane_truck.pre{
+		padding-top: 34px;
+	}
+	.lane_view ul li .lane_truck img{
+		width: 80px;
+		height: auto;
+	}
+	.lane_view ul li .lane_truck .truck_number{
+		width: 50px;
+		font-size: 18px;
+		letter-spacing: 0;
+		font-weight: bold;
+		position: absolute;
+		top:17px;left:40px;
+	}
+	.lane_view ul li .lane_truck .truck_number.white{
+		color:#fff;
+	}
+	.lane_view ul li .lane_truck .truck_number.navy{
+		color:#003fdb;
+	}
+	.lane_detail_wrap{
+		width: 95%;
+		position: absolute;
+		bottom:2.5%;left:2.5%;
+	}
+	.lane_view ul li .lane_detail_area{
+		width: 100%;
+		border: solid 1px #219bdd;
+		margin: 0 auto;
+	}
+	.lane_view ul li .arrow_blue{
+		height: 10px;
+	}
+	.lane_view ul li .arrow_blue img{
+		vertical-align: middle;
+	}
+	.lane_view ul li .lane_detail_area .detail_number{
+		width: 30px;
+		height: 30px;
+		color: #fff;
+		font-size: 20px;
+		line-height:30px;
+		font-weight: bold;
+		background-color:#219bdd;
+		text-align: center;
+	}
+	.lane_view ul li .lane_detail_area .up_text{
+		text-align: center;
+		font-size: 22px; 
+		font-weight: bold;
+		margin-top: -30px;
+	}
+	.lane_view ul li .lane_detail_area .bottom_text{
+		text-align: center;
+		font-size: 24px; 
+		font-weight: bold;
+		letter-spacing: 0;
+	}
+	.blank{
+		clear: both;
+		height:5px;
+	}
+	.job{
+		clear: both;
+		width: 100%;
+		height: 7.5vh;
+		border: solid 2px #219bdd;
+		border-bottom: transparent;
+		overflow: hidden;
+	}
+	.job h2{
+		width: 250px;
+		height: 2.5vh;
+		line-height:2.5vh;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		color: #fff;
+		background-color:#219bdd; 
+	}
+	.job div{
+		padding: 0 5px 0 35px;
+	}
+	.job h3{
+		display: inline-block;
+		font-size: 26px; 
+		font-weight: bold;
+		position: relative;
+		padding-top: 10px;
+	}
+	.job h3:before{
+		content:"";
+		width: 10px;
+		height: 10px;
+		background-color:#219bdd;
+		position: absolute;
+		top:45%;left:-20px;
+	}
+	.job h3:after{
+		content:"";
+		width:0;
+		height:0;
+		border:solid 5px transparent;
+		border-left:solid 10px #219bdd; 
+		position: absolute;
+		top:45%;right:-35px;
+	}
+	.job p{
+		display: inline-block;
+		font-size: 26px; 
+		font-weight: bold;
+		margin-left: 40px;
+	}
+	.schedule{
+		width: 100%;
+		height: 28vh;
+		border: solid 2px #219bdd;
+		overflow: hidden;
+	}
+	.schedule h2{
+		width: 250px;
+		height: 2.5vh;
+		line-height:2.5vh;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		color: #fff;
+		background-color:#219bdd;
+		position: relative;
+	}
+	.schedule h2 span{
+		display:block;
+		width: 40px;
+		height: 2vh;
+		line-height: 2vh;
+		background-color: #fff;
+		color: #219bdd;
+		font-size: 14px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 5px;
+		position: absolute;
+		top:3px;left:3px;
+	}
+	.schedule ul{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 5px 10px;
+	}
+	.schedule ul li{
+		width:20%;
+		min-width: 150px;
+		padding:0 5px;
+		margin: 5px 0;
+		text-align: center;
+	}
+	.schedule ul li.current{
+		background-color: #fff3f3;
+		border: solid 3px #ff0000;
+		border-radius:10px; 
+	}
+	.schedule ul li h3{
+		font-size: 22px;
+		font-weight:bold;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+	.schedule ul li .truck{
+		width: 95px;
+		height:50px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.schedule ul li .truck img{
+		width: 100%;
+		height:auto;
+		position: absolute;
+		bottom: 2px;left:0;
+	}
+	.schedule ul li .truck.pre img{
+		opacity: 0.35;
+	}
+	.schedule ul li .truck .number{
+		width: 55px;
+		letter-spacing: 0;
+		font-size: 22px;
+		font-weight:bold;
+		position: absolute;
+		top:-2px;left:33px;
+	}
+	.schedule ul li .truck .number.white{
+		color:#fff;
+	}
+	.schedule ul li .truck .number.navy{
+		color:#003fdb;
+	}
+	.schedule ul li .bay_number{
+		margin-top: 5px;
+		font-size: 20px;
+		font-weight:normal;
+	}
+}
+
+@media screen and (min-width:0px) and (max-width:767px){ /*スマートフォンの場合*/
+	
+	.view_area{
+		width: 100%;
+		height: 100vh;
+		border-top: solid 65px #fff;
+		border-right: solid 5px #fff;
+		border-bottom: solid 55px #fff;
+		border-left: solid 5px #fff;
+		overflow: hidden;
+		position: relative;
+		z-index:2;
+	}
+	.head_data{
+		width: 100%;
+		border-bottom: solid 5px #fff;
+	}
+	.head_data ul{
+		height: 10.5vh;
+		display: flex;
+		flex-wrap: wrap; /* 折返し指定 */
+	}
+	.head_data ul li{
+		width: calc(50% - 2px);/* margin padding分を引く */
+		height:5.25vh;
+		margin: 0 1px 2px;
+		border: solid 1px #219bdd;
+	}
+	.head_data ul li h2{
+		height: 2.5vh;
+		line-height: 2.5vh;
+		text-align: center;
+		font-size: 14px;
+		font-weight: bold;
+		color: #FFF;
+		background-color:#219bdd; 
+	}
+	.head_data ul li p{
+		height: 2.5vh;
+		font-size: 14px;
+		line-height: 2.5vh;
+		font-weight: bold;
+		padding:0 2%;
+		background-color:#fff;
+		overflow: hidden;
+	}
+	.signal{
+		width: 100%;
+		height: 10vh;
+		padding:0.5% 0.5% 0.5% 25%;
+		text-align: left;
+		background-color: #ffe3e3;
+		border: solid 5px #ff0000;
+		border-radius: 20px;
+		overflow: hidden;
+		position: relative;
+		float:none;
+	}
+	.signal img{
+		display: block;
+		width: 10%;
+		height: auto;
+		position: absolute;
+		top:50%;left:12.5%;
+		margin-left:-5%;
+		margin-top: -5%;
+	}
+	.signal .ng_lane{
+		width: 75%;
+		font-size: 20px;
+		line-height: 1em;
+		position:absolute;
+		bottom: 35%;left:25%;
+	}
+	.signal .ng_lane span{
+		color: #000;
+		margin-right: 2%;
+	}
+	.lane_view{
+		width: 100%;
+		height: 22vh;
+		padding:0.5vh 0 0;
+		border-left:none;
+		border-top:none;
+		background-color:#fff;
+		float:none;
+	}
+	.lane_view ul{
+		display: flex;
+	}
+	.lane_view ul li{
+		width:calc(32.6%);
+		height: 21vh;
+		overflow: hidden;
+		margin-right: 1.1%;
+		background-color: #fff;
+		border: solid 1px #000;
+		position: relative;
+	}
+	.lane_view ul li:nth-of-type(3){
+		margin-right: 0;
+	}
+	.lane_view ul li .lane_number{
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		background-color: #000;
+		font-size: 11px;
+		line-height: 20px;
+		letter-spacing: 0;
+		color: #fff;
+		font-weight: bold;
+	}
+	.lane_view ul li .lane_illust_area{
+		width: 98%;
+		height: 6vh;
+		text-align: center;
+		margin:0 auto;
+		position: relative;
+	}
+	.lane_view ul li .lane_illust{
+		width: 40%;
+		height: 6vh;
+		display: inline-block;
+		padding-left:2.5%;
+	}
+	.lane_view ul li .lane_illust img{
+		width: 100%;
+		max-width: 35px;
+		height: auto;
+	}
+	.lane_view ul li .lane_truck{
+		width: 60px;
+		height: 40px;
+		display: inline-block;
+		padding-top:7px;
+		text-align: center;
+		background-color: #ecfaff;
+		border: solid 1px #219bdd;
+		position: relative;
+		vertical-align: text-bottom;
+	}
+	.lane_view ul li .lane_truck.pre{
+		padding-top: 15px;
+	}
+	.lane_view ul li .lane_truck img{
+		width: 50px;
+		height: auto;
+	}
+	.lane_view ul li .lane_truck .truck_number{
+		width: 40px;
+		font-size: 12px;
+		font-weight: bold;
+		position: absolute;
+		top:7px;left:15px;
+		letter-spacing: 0;
+	}
+	.lane_view ul li .lane_truck .truck_number.white{
+		color:#fff;
+	}
+	.lane_view ul li .lane_truck .truck_number.navy{
+		color:#003fdb;
+	}
+	.lane_detail_wrap{
+		width: 95%;
+		position: absolute;
+		bottom:2.5%;left:2.5%;
+	}
+	.lane_view ul li .lane_detail_area{
+		width: 100%;
+		height:4.5vh;
+		border: solid 1px #219bdd;
+		margin: 0 auto;
+	}
+	.lane_view ul li .arrow_blue{
+		height: 2px;
+	}
+	.lane_view ul li .arrow_blue img{
+		display: none;
+	}
+	.lane_view ul li .lane_detail_area .detail_number{
+		width: 15px;
+		height: 15px;
+		color: #fff;
+		font-size: 11px;
+		font-weight: bold;
+		background-color:#219bdd;
+		text-align: center;
+	}
+	.lane_view ul li .lane_detail_area .up_text{
+		text-align: center;
+		font-size: 11px; 
+		font-weight: bold;
+		line-height: 1.15em;
+		margin-top: -14px;
+	}
+	.lane_view ul li .lane_detail_area .bottom_text{
+		text-align: center;
+		font-size: 11px; 
+		font-weight: bold;
+		line-height: 1.15em;
+		letter-spacing: 0;
+	}
+	.blank{
+		clear: both;
+		height:0;
+	}
+	.job{
+		clear: both;
+		width: 100%;
+		height:6vh;
+		border: solid 2px #219bdd;
+		border-bottom: transparent;
+		overflow: hidden;
+	}
+	.job h2{
+		width: 100%;
+		height: 2.25vh;
+		line-height:2.25vh;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+		color: #fff;
+		background-color:#219bdd; 
+	}
+	.job div{
+		padding: 0 1% 0 3%;
+	}
+	.job h3{
+		display: inline-block;
+		font-size: 12px;
+		letter-spacing: 0;
+		font-weight: bold;
+		position: relative;
+	}
+	.job h3:before{
+		content:"";
+		width: 5px;
+		height: 5px;
+		background-color:#219bdd;
+		position: absolute;
+		top:40%;left:-7px;
+	}
+	.job h3:after{
+		content:"";
+		width:0;
+		height:0;
+		border:solid 3px transparent;
+		border-left:solid 5px #219bdd; 
+		position: absolute;
+		top:40%;right:-12px;
+	}
+	.job p{
+		display: inline-block;
+		font-size: 12px; 
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	.schedule{
+		width: 100%;
+		height: 27vh;
+		border: solid 2px #219bdd;
+		overflow: hidden;
+	}
+	.schedule h2{
+		width: 100%;
+		height: 2.25vh;
+		line-height:2.25vh;
+		font-size: 13px;
+		font-weight: bold;
+		text-align: center;
+		color: #fff;
+		background-color:#219bdd;
+		position: relative;
+	}
+	.schedule h2 span{
+		display:block;
+		width: 35px;
+		height: 1.75vh;
+		line-height: 1.75vh;
+		background-color: #fff;
+		color: #219bdd;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 2px;
+		position: absolute;
+		top:1px;left:1px;
+	}
+	.schedule ul{
+		display: flex;
+		flex-wrap: wrap; /* 折返し指定 */
+		padding: 2px;
+	}
+	.schedule ul li{
+		width: calc(20% - 4px);/* margin padding分を引くが微調整 */
+		min-width:unset;
+		padding:0 2px;
+		margin: 3px 2px;
+		text-align: center;
+	}
+	.schedule ul li.current{
+		background-color: #fff3f3;
+		border: solid 2px #ff0000;
+		border-radius:10px; 
+	}
+	.schedule ul li h3{
+		font-size: 14px;
+		font-weight:bold;
+		text-align: center;
+		line-height: 1em;
+		margin-bottom:2px;
+	}
+	.schedule ul li .truck{
+		width: 55px;
+		height:35px;
+		margin:0 auto;
+		position: relative;
+	}
+	.schedule ul li .truck img{
+		width: 100%;
+		height:auto;
+		position: absolute;
+		bottom: 2px;left:0;
+	}
+	.schedule ul li .truck.pre img{
+		opacity: 0.35;
+	}
+	.schedule ul li .truck .number{
+		width: 35px;
+		font-size: 12px;
+		letter-spacing: 0;
+		font-weight:bold;
+		position: absolute;
+		top:4px;left:17px;
+	}
+	.schedule ul li .truck .number.white{
+		color:#fff;
+	}
+	.schedule ul li .truck .number.navy{
+		color:#003fdb;
+	}
+	.schedule ul li .bay_number{
+		margin-top: 0;
+		font-size: 13px;
+		font-weight: normal;
+		line-height: 1em;
+	}
+}

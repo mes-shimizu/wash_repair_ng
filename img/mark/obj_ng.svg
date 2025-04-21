@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.53 65.53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <g id="L_Leergrundriss">
+    <rect class="cls-1" x="-6.24" y="25.43" width="78" height="14.67" transform="translate(32.76 -13.57) rotate(45)"/>
+    <rect class="cls-1" x="-6.24" y="25.43" width="78" height="14.67" transform="translate(-13.57 32.76) rotate(-45)"/>
+  </g>
+</svg>
